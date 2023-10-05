@@ -41,7 +41,7 @@ function check(event){
 			resetButton.textContent='RESET'
 			resetButton.id='reset'
 			resetButton.addEventListener('click',imNotRobot);
-			document.querySelector('body').insertBefore(resetButton,document.querySelector('script'));	
+			document.querySelector('body').insertBefore(resetButton,document.querySelector('body').lastElementChild);	
 		}
 	else if(count===1 && prev!==event.target.id){
 			++count;
@@ -55,7 +55,7 @@ function check(event){
 					
 					message.textContent='You are a human. Congratulations!'
 					message.id='para'
-					document.querySelector('body').insertBefore(message,document.querySelector('script'))
+					document.querySelector('body').insertBefore(message,document.querySelector('body').lastElementChild)
 
 				}
 				else{
@@ -63,13 +63,13 @@ function check(event){
 					
 					message.textContent='We can\'t verify you as a human. You selected the non-identical tiles.'
 					message.id='para'
-					document.querySelector('body').insertBefore(message,document.querySelector('script'))
+					document.querySelector('body').insertBefore(message,document.querySelector('body').lastElementChild)
 
 				}
 
 				
 			});
-			document.querySelector('body').insertBefore(verifyButton,document.querySelector('script'));	
+			document.querySelector('body').insertBefore(verifyButton,document.querySelector('body').lastElementChild);	
 	}
 	else {
 
